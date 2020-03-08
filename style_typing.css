@@ -125,3 +125,9 @@ footer{
 a{
 	color:black
 }
+
+@media (max-width: 500px){
+	input{
+		width:80vw;
+	}
+}
