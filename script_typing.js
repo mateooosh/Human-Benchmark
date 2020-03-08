@@ -33,7 +33,7 @@ function check(){
 	if (i==0)
 		startTime = new Date();
 	if(i!=words.length){
-		if(correct==temp.value){
+		if(correct==temp.value.toLowerCase()){
 			yes.play();
 			correctAnswers++;
 			temp.value = "";
