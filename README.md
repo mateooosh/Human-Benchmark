@@ -1,2 +1,2 @@
 # Human-Benchmark
-[Click here to see](https://github.com/mateooosh/Human-Benchmark)
+[Click here to see](https://mateooosh.github.io/Human-Benchmark/)
