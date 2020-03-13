@@ -38,6 +38,12 @@ article{
 	text-align:center;
 }
 
+#checkbox{
+	display:inline; 
+	width:20px; 
+	margin-top:10px;
+}
+
 #sekcja{
 	cursor: pointer;
 }
@@ -118,6 +124,7 @@ input:focus{
 textarea{
 	background-color: #DDDDFF;
 	margin-top:20px;
+	border-radius:4px;
 }
 
 
@@ -200,4 +207,19 @@ footer{
 
 label a{
 	color:white;
+}
+
+#proba1{
+	width:150px;
+	height:4px;
+	margin-top:10px;
+	margin:auto;
+	background-color: rgb(0, 93, 225);
+}
+
+#proba2{
+	margin-top:10px;
+	width: 150px;
+	height:100%;
+	background-color: white;
 }
