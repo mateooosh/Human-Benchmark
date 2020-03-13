@@ -191,6 +191,11 @@ footer{
 	#sekcja-contact{
 		height:720px;
 	}
+
+	h1{
+		font-size:50px;
+	}
+	
 	h5{
 		padding-top:40px;
 	}
@@ -205,8 +210,12 @@ footer{
 	background-color: #CCCCEE;
 }
 
-label a{
+label a, p a{
 	color:white;
+}
+
+label a:hover, p a:hover{
+	color:black;
 }
 
 #proba1{
