@@ -2,25 +2,27 @@
 	margin:0;
 }
 
-nav{
-	
-}
-
 section{
 	height:450px;
 	margin-bottom:20px;
+}
+
+
+h2 span{
+	margin:20px;
 }
 
 h4 span{
 	margin:20px;
 }
 
-#last{
-	font-size: 20px;
-	margin:auto;
-	text-align:center;
+button span{
+	font-size:25px;
 }
 
+article{
+	text-align:center;
+}
 
 #correct{
 	font-size:70px;
@@ -36,11 +38,30 @@ h4 span{
 	text-align:center;
 }
 
+#sekcja{
+	cursor: pointer;
+}
+
+#bg{
+	position:absolute;
+	top:0;
+	display:none;
+	width:100vw;
+	height:100vh;
+}
+
+a{
+	color:black;
+}
+
 #icon{
 	margin:auto;
 	width:100px;
 	color:white;
-	padding-top:30px;
+}
+
+img{
+	margin-top:30px;
 }
 
 h1{
@@ -62,6 +83,19 @@ h3, h4{
 	color:white;
 }
 
+h5{
+	padding-top:100px;
+	padding-bottom:10px;
+	font-size:40px;
+	font-weight: 400;
+}
+
+p{
+	margin-bottom:8px;
+	font-size:20px;
+	font-weight: 300;
+}
+
 input{
 	font-size:30px;
 	margin:auto;
@@ -81,6 +115,10 @@ input:focus{
 	background-color: #CCCCEE;
 }
 
+textarea{
+	background-color: #DDDDFF;
+	margin-top:20px;
+}
 
 
 button{
@@ -100,6 +138,16 @@ button:hover{
 	background-color: #DDDD00;
 }
 
+.btn{
+	position: absolute;
+	right:20px;
+	top:5px;
+}
+
+.btn:hover{
+	background-color:#DDDDDD;
+}
+
 .wynik{
 	width:300px;
 	margin:auto;
@@ -112,22 +160,44 @@ span{
 	font-size:25px;
 }
 
-.btn{
-	position: absolute;
-	right:20px;
-	top:5px;
-}
-
 footer{
 	margin-top:20px;
-}
-
-a{
-	color:black
 }
 
 @media (max-width: 500px){
 	input{
 		width:80vw;
 	}
+
+	#correct{
+		font-size:60px;
+		height:90px;
+	}
+
+	#next{
+		font-size:30px;
+		height:105px;
+	}
+}
+
+@media(max-width:991px){
+	#sekcja-contact{
+		height:720px;
+	}
+	h5{
+		padding-top:40px;
+	}
+}
+
+.form-control{
+	margin-top:0;
+	background-color:#DDDDFF; 
+}
+
+.form-control:focus, textarea:focus{
+	background-color: #CCCCEE;
+}
+
+label a{
+	color:white;
 }

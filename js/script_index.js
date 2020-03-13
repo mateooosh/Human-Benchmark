@@ -106,7 +106,7 @@ function toEarly(){
 	//document.getElementById('sekcja').removeAttribute('id');
 	$('section').removeAttr('class');
 	$('section').addClass('container-fluid bg-danger text-white');
-	$('#icon').html('<i class="icon-warning"></i>');
+	$('#icon').html('<i class="icon-attention-circled"></i>');
 	$('h1').html('Too soon!');
 	$('h2').html('');
 
