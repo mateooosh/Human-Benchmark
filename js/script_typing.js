@@ -1,7 +1,4 @@
-let temp = document.getElementById('word');
-temp.addEventListener('keyup', check);
-
-let words = ['robak', 'politechnika', 'warzywniak', 'spożywczy', 'butelka', 'telefon', 'kopalnia', 'młotek', 'mieszkanie', 'wzgórze', 'autobus'];
+let words = ['describe', 'article', 'technical', 'sentence', 'accept', 'celebrate', 'theme', 'variety', 'embrace', 'turnover', 'resemble'];
 
 let corrected = [];
 
@@ -18,18 +15,18 @@ var no = new Audio("audio/incorrect.mp3");
 $('#correct').html(correct);
 $('#next').html(next);
 
-function change(){
+
+const change = () => {
 	$('#type').css('display', 'block');
 	$('#type2').css('display', 'none');
 }
 
-function stopTime(){
+let stopTime = () => {
 	stopTime = new Date();
 	$('h4').html("<span>Time | "+((stopTime-startTime)/1000)+"</span><span>Correct | "+correctAnswers+"/"+words.length+"</span>");
-	//$('h2').html("Correct | "+correctAnswers+"/"+words.length);
 }
 
-function check(){
+const check = () => {
 	if (i==0)
 		startTime = new Date();
 	if(i!=words.length){
@@ -50,7 +47,6 @@ function check(){
 				stopTime();
 				let button = $("<button>").attr("id", "button").text("Show answers").css("margin-top", "30px");
    				 $("h4").after(button);
-   				 //document.getElementById('button').addEventListener('click', showAnswers);
    				 $('#button').on('click', showAnswers);
 			}
 			if(i==words.length-1){
@@ -75,7 +71,6 @@ function check(){
 				stopTime();
 				let button = $("<button>").attr("id", "button").text("Show answers").css("margin-top", "30px");
    				$("h4").after(button);
-	   			//document.getElementById('button').addEventListener('click', showAnswers);
 	   			$('#button').on('click', showAnswers);
 			}
 			
@@ -87,8 +82,7 @@ function check(){
 	}
 }
 
-function showAnswers(){
-
+const showAnswers = () => {
 	let div = document.createElement("div");
 	div.setAttribute('id', 'div'+i); 
 	for(let i=1; i<=words.length; i++){
@@ -106,4 +100,8 @@ function showAnswers(){
 
 	}
 }
+
+let temp = document.getElementById('word');
+temp.addEventListener('keyup', check);
+
 

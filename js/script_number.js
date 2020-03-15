@@ -1,26 +1,22 @@
-let $btn = $('#button');
-$btn.on('click', start);
-
 let $div = $('#proba1');
 $div.remove();
 
 let h1 = $('h1');
 let h2 = $('h2');
 
-let losowa, level = 0;
+let random, level = 0;
 
-function start(){
-	console.log('start');
+const start = () =>{
 	$btn.off('click');
 	$btn.off('click');
 
 	$('#icon').hide();
-	losowa = Math.floor(Math.random()*10);
+	random = Math.floor(Math.random()*10);
 	
 	$('h1').css('padding-top', '100px');
 	$('h1').css('font-weight', '400');
 	$('h1').css('margin-top', '0');
-	$('h1').html(losowa);
+	$('h1').html(random);
 	$('h2').html('');
 	$btn.remove();
 
@@ -28,16 +24,16 @@ function start(){
 	time();
 }
 
-function start2(){
+const start2 = () =>{
 	$btn.off('click');
 	for(let i=0; i<=level; i++)
-		losowa += Math.floor(Math.random()*10).toString();
+		random += Math.floor(Math.random()*10).toString();
 	$('#proba2').css('width', '150px');
 	$div.show();
 	$('h1').css('padding-top', '100px');
 	$('h1').css('font-weight', '400');
 	$('h1').css('margin-top', '0');
-	$('h1').html(losowa);
+	$('h1').html(random);
 	$('h2').html('');
 	$btn.remove();
 
@@ -45,7 +41,7 @@ function start2(){
 	time();
 }
 
-function time(){
+const time = () => {
 	$('#proba2').css('width', '-=1px');
 	let timeout = setTimeout('time()', 15);
 	if($('#proba2').css('width')=='0px'){
@@ -54,7 +50,7 @@ function time(){
 	}
 }
 
-function change(){
+const change = () => {
 	$('h1').html("What was the number?");
 	$('h1').css("font-size", "40px");
 	$div.hide();
@@ -66,10 +62,10 @@ function change(){
 	$btn.on('click', check);
 }
 
-function check(){
+const check = () => {
 	$btn.off('click');
 
-	if(losowa==document.getElementById('word').value){
+	if(random==document.getElementById('word').value){
 		$btn.hide();
 		$('#word').hide();
 		level++;
@@ -79,7 +75,7 @@ function check(){
 		$btn.show();
 		$btn.on('click', start2);
 		document.getElementById('word').value = '';
-		losowa = '';
+		random = '';
 	}
 
 	else{
@@ -93,7 +89,7 @@ function check(){
 	}	
 }
 
-function reset(){
+const reset = () => {
 	$btn.off('click');
 	$btn.html('Get Started');
 	$('h1').html("Number Memory");
@@ -101,5 +97,8 @@ function reset(){
 	$('section').attr('class', 'container-fluid bg-primary text-white');
 	$btn.on('click', start2);
 	level = 0;
-	losowa = '';
+	random = '';
 }
+
+let $btn = $('#button');
+$btn.on('click', start);
