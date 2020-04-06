@@ -1,12 +1,11 @@
-*{
+/**{
 	margin:0;
-}
+}*/
 
 section{
 	height:450px;
 	margin-bottom:20px;
 }
-
 
 h2 span{
 	margin:20px;
@@ -14,6 +13,10 @@ h2 span{
 
 h4 span{
 	margin:20px;
+}
+
+p{
+	margin-top:5px;
 }
 
 button span{
