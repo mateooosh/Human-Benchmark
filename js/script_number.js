@@ -1,5 +1,8 @@
-`le` $div = $(`#proba1`);`$d`v.remove();`le` h1 = $(`h1`);`le` h2 = $(`h2`);
+let $div = $('#proba1');
+$div.remove();
 
+let h1 = $('h1');
+let h2 = $('h2');
 let random, level = 0;
 
 const start = () =>{
