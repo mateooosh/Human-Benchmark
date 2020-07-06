@@ -1,4 +1,4 @@
-let words = [`describe`, `article`, ]//`technical`, `sentence`, `accept`, `celebrate`, `theme`, `variety`, `embrace`, `turnover`, `resemble`];
+let words = [`describe`, `article`, `technical`, `sentence`, `resemble`, `celebrate`, `theme`, `variety`, `embrace`, `turnover`];
 
 let corrected = [];
 
